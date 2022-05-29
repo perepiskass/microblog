@@ -1,0 +1,7 @@
+__pycache__
+logs/
+mcblg/
+migrations/
+appPackage/__pycache__/
+appFlask.db
+.flaskenv

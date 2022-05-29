@@ -1,0 +1,30 @@
+python -m venv mcblg
+virtualenv mcblg
+
+pip install flask
+
+pip install python-dotenv
+set $FLASK_APP=microblog.py
+
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install flask-login
+pip install email_validator
+pip install flask-mail
+pip install pyjwt
+pip install flask-bootstrap
+pip install flask-moment
+pip install flask-babel
+
+//create translate files
+pybabel extract -F babel.cfg -k _l -o messages.pot .
+pybabel init -i messages.pot -d appPackage/translations -l ru
+pybabel compile -d appPackage/translations
+flask translate update
+flask translate compile
+
+//create db
+flask db init
+flask db migrate -m "init db"
+
