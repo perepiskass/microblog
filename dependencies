@@ -1,5 +1,7 @@
 python -m venv mcblg
 virtualenv mcblg
+pip install -r requirements.txt
+
 
 pip install flask
 

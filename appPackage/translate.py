@@ -1,17 +1,16 @@
-import json
-import re
+# import json
+# import re
 import requests
 from flask_babel import _
-from appPackage import appFlask
-import appPackage
+from flask import current_app
 
 def translate(text, source_language, dest_language):
-    if 'API_YANDEX_KEY' not in appFlask.config or not appFlask.config['API_YANDEX_KEY']:
+    if 'API_YANDEX_KEY' not in current_app.config or not current_app.config['API_YANDEX_KEY']:
         return _('Error: the translation service is not configured.')
 
-    API_KEY = appFlask.config['API_YANDEX_KEY']
-    folder_id = appFlask.config['API_YANDEX_CATALOG_ID']
-    url = appFlask.config['API_YANDEX_URL']
+    API_KEY = current_app.config['API_YANDEX_KEY']
+    folder_id = current_app.config['API_YANDEX_CATALOG_ID']
+    url = current_app.config['API_YANDEX_URL']
     texts = []
     texts.append(text)
    
@@ -41,13 +40,13 @@ def translate(text, source_language, dest_language):
 # }
 
 def guess_language(text):
-    if 'API_YANDEX_KEY' not in appFlask.config or not appFlask.config['API_YANDEX_KEY']:
+    if 'API_YANDEX_KEY' not in current_app.config or not current_app.config['API_YANDEX_KEY']:
         return _('Error: the translation service is not configured.')
 
-    API_KEY = appFlask.config['API_YANDEX_KEY']
+    API_KEY = current_app.config['API_YANDEX_KEY']
     DEST_LANGUAGE = 'en'
-    folder_id = appFlask.config['API_YANDEX_CATALOG_ID']
-    url = appFlask.config['API_YANDEX_URL']
+    folder_id = current_app.config['API_YANDEX_CATALOG_ID']
+    url = current_app.config['API_YANDEX_URL']
     texts = []
     texts.append(text)
    

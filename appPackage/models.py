@@ -1,10 +1,11 @@
 from datetime import datetime
 from time import time
 import jwt
-from appPackage import db, login, appFlask
+from appPackage import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from hashlib import md5
+from flask import current_app
 
 import appPackage
 
@@ -61,7 +62,7 @@ class User(UserMixin, db.Model):
         return followed.union(own).order_by(Post.timestamp.desc())
 
     def get_reset_password_token(self, expires_in=600):
-        key = appFlask.config['SECRET_KEY']
+        key = current_app.config['SECRET_KEY']
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
             key, algorithm='HS256')    #decode для перевода токена из бинарного вида в сторку
@@ -69,7 +70,7 @@ class User(UserMixin, db.Model):
     @staticmethod
     def verify_reset_password_token(token):
         try:
-            id = jwt.decode(token, appFlask.config['SECRET_KEY'],
+            id = jwt.decode(token, current_app.config['SECRET_KEY'],
                             algorithms=['HS256'])['reset_password']
         except:
             return
