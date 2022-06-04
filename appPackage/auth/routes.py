@@ -13,7 +13,7 @@ from flask_babel import _
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:                                       #если текущий пользователь уже зарегестрирован то возвращается стартовая страница
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
     form = LoginForm()                                                      #создаем объект формы ввода
     if form.validate_on_submit():                                           #если данные введены
         user = User.query.filter_by(username=form.username.data).first()    #получаем из БД объект пользователя по имени, первое совпадение

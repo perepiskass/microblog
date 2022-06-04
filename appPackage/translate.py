@@ -13,8 +13,7 @@ def translate(text, source_language, dest_language):
     url = current_app.config['API_YANDEX_URL']
     texts = []
     texts.append(text)
-   
-
+    
     body = {
         "sourceLanguageCode": source_language,
         "targetLanguageCode": dest_language,
@@ -28,7 +27,6 @@ def translate(text, source_language, dest_language):
     }
 
     response = requests.post(url, json = body, headers = headers)
-
     if response.status_code != 200:
         return _('Error: the translation service failed.')
 
@@ -63,7 +61,6 @@ def guess_language(text):
     }
 
     response = requests.post(url, json = body, headers = headers)
-
     if response.status_code != 200:
         return _('Error: the translation service failed.')
 
