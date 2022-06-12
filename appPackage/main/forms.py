@@ -5,6 +5,16 @@ from wtforms.validators import ValidationError, DataRequired, Length
 from flask_babel import _, lazy_gettext as _l
 from appPackage.models import User
 
+class SearchForm(FlaskForm):
+    q = StringField(_l('Search'), validators=[DataRequired()])
+    print("Form is - ", q)
+    def __init__(self, *args, **kwargs):
+        if 'formdata' not in kwargs:
+            kwargs['formdata'] = request.args               #formdata определяет, откуда Flask-WTF получает формы
+        if 'csrf_enabled' not in kwargs:
+            kwargs['csrf_enabled'] = False                  #обходить проверку CSRF для этой формы.
+        super(SearchForm, self).__init__(*args, **kwargs)
+
 
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])

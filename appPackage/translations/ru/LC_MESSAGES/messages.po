@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-29 21:04+0300\n"
+"POT-Creation-Date: 2022-06-12 15:16+0300\n"
 "PO-Revision-Date: 2022-05-02 15:33+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: appPackage/__init__.py:18
+#: appPackage/__init__.py:19
 msgid "Please log in to access this page."
 msgstr "Пожалуйста, введите логин и пароль для входа на страницу"
 
-#: appPackage/translate.py:9 appPackage/translate.py:44
+#: appPackage/translate.py:9 appPackage/translate.py:42
 msgid "Error: the translation service is not configured."
 msgstr "Ошибка: сервис перевода не сконфигурированн"
 
-#: appPackage/translate.py:33 appPackage/translate.py:68
+#: appPackage/translate.py:31 appPackage/translate.py:65
 msgid "Error: the translation service failed."
 msgstr "Ошибка: сервис перевода не доступен"
 
@@ -36,7 +36,7 @@ msgid "[Microblog] Reset Your Password"
 msgstr "[Microblog] Сборосить ваш пароль"
 
 #: appPackage/auth/forms.py:8 appPackage/auth/forms.py:16
-#: appPackage/main/forms.py:10
+#: appPackage/main/forms.py:20
 msgid "Username"
 msgstr "Имя пользователя"
 
@@ -67,7 +67,7 @@ msgstr "Повторить пароль"
 msgid "Register"
 msgstr "Регистрация"
 
-#: appPackage/auth/forms.py:25 appPackage/main/forms.py:22
+#: appPackage/auth/forms.py:25 appPackage/main/forms.py:32
 msgid "Please use a different username."
 msgstr "Пожалуйста, используйте другое имя"
 
@@ -100,57 +100,62 @@ msgstr "Сброс пароля"
 msgid "Your password has been reset."
 msgstr "Ваш пароль был сброшен"
 
-#: appPackage/main/forms.py:11
+#: appPackage/main/forms.py:9 appPackage/main/routes.py:33
+#, fuzzy
+msgid "Search"
+msgstr "Поиск"
+
+#: appPackage/main/forms.py:21
 msgid "About me"
 msgstr "Обо мне"
 
-#: appPackage/main/forms.py:12 appPackage/main/forms.py:27
+#: appPackage/main/forms.py:22 appPackage/main/forms.py:37
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: appPackage/main/forms.py:26
+#: appPackage/main/forms.py:36
 msgid "Say something"
 msgstr "Сказать что нибудь"
 
-#: appPackage/main/routes.py:24
+#: appPackage/main/routes.py:49
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликовон!"
 
-#: appPackage/main/routes.py:30 appPackage/templates/base.html:41
+#: appPackage/main/routes.py:55 appPackage/templates/base.html:41
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: appPackage/main/routes.py:41 appPackage/templates/base.html:42
+#: appPackage/main/routes.py:66 appPackage/templates/base.html:42
 msgid "Explore"
 msgstr "Обзор"
 
-#: appPackage/main/routes.py:66
+#: appPackage/main/routes.py:91
 msgid "Your changes have been saved."
 msgstr "Ваши изменения были сохранены"
 
-#: appPackage/main/routes.py:71 appPackage/templates/main/edit_profile.html:5
+#: appPackage/main/routes.py:96 appPackage/templates/main/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Изменить профиль"
 
-#: appPackage/main/routes.py:81 appPackage/main/routes.py:101
+#: appPackage/main/routes.py:106 appPackage/main/routes.py:126
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Пользователяь %(username)s не найден."
 
-#: appPackage/main/routes.py:84
+#: appPackage/main/routes.py:109
 msgid "You cannot follow yourself!"
 msgstr "Вы не можете подписаться на себя!"
 
-#: appPackage/main/routes.py:88
+#: appPackage/main/routes.py:113
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Вы подписались на %(username)s!"
 
-#: appPackage/main/routes.py:104
+#: appPackage/main/routes.py:129
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться от себя!"
 
-#: appPackage/main/routes.py:108
+#: appPackage/main/routes.py:133
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Вы не подписанны на пользователя %(username)s"
@@ -172,17 +177,17 @@ msgstr "Добро пожаловать в микроблог"
 msgid "Error: Could not contact server."
 msgstr "Ошибка: нет связи с сервером"
 
-#: appPackage/templates/base.html:46
+#: appPackage/templates/base.html:53
 msgid "Login"
 msgstr "Логин"
 
-#: appPackage/templates/base.html:48
+#: appPackage/templates/base.html:55
 msgid "Profile"
 msgstr "Профиль"
 
-#: appPackage/templates/base.html:49
+#: appPackage/templates/base.html:56
 msgid "Logout"
-msgstr "Разлогиниться"
+msgstr "Выйти"
 
 #: appPackage/templates/auth/login.html:12
 msgid "New User?"
@@ -235,6 +240,18 @@ msgstr "Новые посты"
 #: appPackage/templates/main/user.html:48
 msgid "Older posts"
 msgstr "Старые посты"
+
+#: appPackage/templates/main/search.html:4
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: appPackage/templates/main/search.html:13
+msgid "Previous results"
+msgstr "Предыдущие результаты"
+
+#: appPackage/templates/main/search.html:18
+msgid "Next results"
+msgstr "Следующие результаты"
 
 #: appPackage/templates/main/user.html:8
 msgid "User"

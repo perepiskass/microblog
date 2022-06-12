@@ -10,6 +10,7 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
+from elasticsearch import Elasticsearch
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -24,6 +25,8 @@ babel = Babel()
 def create_app(config_class = Config):
     appFlask = Flask(__name__)
     appFlask.config.from_object(config_class)
+
+    appFlask.elasticsearch = Elasticsearch([appFlask.config['ELASTICSEARCH_URL']], ca_certs = appFlask.config['ELASTICSEARCH_CERT']) if appFlask.config['ELASTICSEARCH_URL'] else None
 
     db.init_app(appFlask)
     migrate.init_app(appFlask, db)

@@ -28,3 +28,6 @@ class Config(object):
     API_YANDEX_KEY = os.environ.get('API_YANDEX_KEY')
     API_YANDEX_CATALOG_ID = os.environ.get('API_YANDEX_CATALOG_ID')
     API_YANDEX_URL = os.environ.get('API_YANDEX_URL')
+
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    ELASTICSEARCH_CERT = os.environ.get('ELASTICSEARCH_CERT')
