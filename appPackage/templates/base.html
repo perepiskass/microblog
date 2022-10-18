@@ -27,10 +27,11 @@
             $('.user_popup').hover(
                 function(event) {
                     // mouse in event handler
-                    var elem = event.currentTarget;
+                    var elem = $(event.currentTarget);
                     timer = setTimeout(function() {
                         timer = null;
-                        xhr = $.ajax('/user/' + elem.first().text().trim() + '/popup').done(
+                        var name = elem.first().text().trim();
+                        xhr = $.ajax('/user/' + name + '/popup').done(
                             function(data) {
                                 xhr = null
                                 elem.popover({
@@ -47,7 +48,7 @@
                 },
                 function(event) {
                     // mouse out event handler
-                    var elem = event.currentTarget;
+                    var elem = $(event.currentTarget);
                     // есть объект timer, значит еще не прошла секунда
                     if (timer) {
                         clearTimeout(timer);
