@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-12 15:16+0300\n"
+"POT-Creation-Date: 2022-11-26 22:26+0300\n"
 "PO-Revision-Date: 2022-05-02 15:33+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -110,6 +110,7 @@ msgid "About me"
 msgstr "Обо мне"
 
 #: appPackage/main/forms.py:22 appPackage/main/forms.py:37
+#: appPackage/main/forms.py:47
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -117,15 +118,19 @@ msgstr "Подтвердить"
 msgid "Say something"
 msgstr "Сказать что нибудь"
 
+#: appPackage/main/forms.py:46
+msgid "Message"
+msgstr "Сообщение"
+
 #: appPackage/main/routes.py:49
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликовон!"
 
-#: appPackage/main/routes.py:55 appPackage/templates/base.html:41
+#: appPackage/main/routes.py:55 appPackage/templates/base.html:87
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: appPackage/main/routes.py:66 appPackage/templates/base.html:42
+#: appPackage/main/routes.py:66 appPackage/templates/base.html:88
 msgid "Explore"
 msgstr "Обзор"
 
@@ -160,12 +165,21 @@ msgstr "Вы не можете отписаться от себя!"
 msgid "You are not following %(username)s."
 msgstr "Вы не подписанны на пользователя %(username)s"
 
-#: appPackage/templates/_post.html:14
+#: appPackage/main/routes.py:164
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "Ваш пароль был сброшен"
+
+#: appPackage/main/routes.py:166
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+#: appPackage/templates/_post.html:16
 #, fuzzy, python-format
 msgid "%(username)s said %(when)s :"
 msgstr "%(username)s говорит:"
 
-#: appPackage/templates/_post.html:21
+#: appPackage/templates/_post.html:23
 msgid "Translate"
 msgstr "Перевести"
 
@@ -177,17 +191,49 @@ msgstr "Добро пожаловать в микроблог"
 msgid "Error: Could not contact server."
 msgstr "Ошибка: нет связи с сервером"
 
-#: appPackage/templates/base.html:53
+#: appPackage/templates/base.html:99
 msgid "Login"
 msgstr "Логин"
 
-#: appPackage/templates/base.html:55
+#: appPackage/templates/base.html:101
 msgid "Profile"
 msgstr "Профиль"
 
-#: appPackage/templates/base.html:56
+#: appPackage/templates/base.html:102
 msgid "Logout"
 msgstr "Выйти"
+
+#: appPackage/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "Отправить сообщение для %(recipient)s"
+
+#: appPackage/templates/main/user.html:13
+#: appPackage/templates/user_popup.html:13
+msgid "Last seen on"
+msgstr "Последний раз был"
+
+#: appPackage/templates/main/user.html:15
+#: appPackage/templates/user_popup.html:16
+#, python-format
+msgid "%(count)d followers"
+msgstr "%(count)d подписчиков"
+
+#: appPackage/templates/main/user.html:15
+#: appPackage/templates/user_popup.html:17
+#, python-format
+msgid "%(count)d following"
+msgstr "%(count)d подписок"
+
+#: appPackage/templates/main/user.html:22
+#: appPackage/templates/user_popup.html:21
+msgid "Follow"
+msgstr "Подписаться"
+
+#: appPackage/templates/main/user.html:29
+#: appPackage/templates/user_popup.html:25
+msgid "Unfollow"
+msgstr "Отписаться"
 
 #: appPackage/templates/auth/login.html:12
 msgid "New User?"
@@ -232,12 +278,12 @@ msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
 #: appPackage/templates/main/index.html:17
-#: appPackage/templates/main/user.html:43
+#: appPackage/templates/main/user.html:47
 msgid "Newer posts"
 msgstr "Новые посты"
 
 #: appPackage/templates/main/index.html:22
-#: appPackage/templates/main/user.html:48
+#: appPackage/templates/main/user.html:52
 msgid "Older posts"
 msgstr "Старые посты"
 
@@ -257,29 +303,11 @@ msgstr "Следующие результаты"
 msgid "User"
 msgstr "Пользователь"
 
-#: appPackage/templates/main/user.html:13
-msgid "Last seen on"
-msgstr "Последний раз был"
-
-#: appPackage/templates/main/user.html:15
-#, python-format
-msgid "%(count)d followers"
-msgstr "%(count)d подписчиков"
-
-#: appPackage/templates/main/user.html:15
-#, python-format
-msgid "%(count)d following"
-msgstr "%(count)d подписок"
-
 #: appPackage/templates/main/user.html:17
 msgid "Edit your profile"
 msgstr "Изменить ваш профиль"
 
-#: appPackage/templates/main/user.html:22
-msgid "Follow"
-msgstr "Подписаться"
-
-#: appPackage/templates/main/user.html:29
-msgid "Unfollow"
-msgstr "Отписаться"
+#: appPackage/templates/main/user.html:35
+msgid "Send private message"
+msgstr "Отправить личное сообщение"
 

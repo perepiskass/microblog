@@ -40,3 +40,8 @@ class PostForm(FlaskForm):
 # необходим для кнопок, например "подписаться" "отписаться"
 class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
+
+
+class MessageForm(FlaskForm):
+    message = TextAreaField(_l('Message'), validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))

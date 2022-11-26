@@ -4,10 +4,10 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from appPackage.translate import translate, guess_language
 from appPackage import db
-from appPackage.main.forms import EditProfileForm, EmptyForm, PostForm
-from appPackage.models import User, Post
+from appPackage.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm, MessageForm
+from appPackage.models import User, Post, Message
 from appPackage.main import bp
-from appPackage.main.forms import SearchForm
+
 
 @bp.before_app_request
 def before_request():
@@ -149,3 +149,18 @@ def translate_text():
 def user_popup(username):
     user = User.query.filter_by(username=username).first_or_404()
     return render_template('user_popup.html', user=user)
+
+
+#Отправка личных сообщений
+@bp.route('/send_message/<recipient>', methods=['GET', 'POST'])
+@login_required
+def send_message(recipient):
+    user = User.query.filter_by(username=recipient).first_or_404()
+    form = MessageForm()
+    if form.validate_on_submit():
+        msg = Message(author=current_user, recipient=user, body=form.message.data)
+        db.session.add(msg)
+        db.session.commit()
+        flash(_('Your message has been sent.'))
+        return redirect(url_for('main.user', username=recipient))
+    return render_template('send_message.html', title=_('Send Message'), form=form, recipient=recipient)
