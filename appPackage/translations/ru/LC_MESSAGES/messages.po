@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-26 22:26+0300\n"
+"POT-Creation-Date: 2022-12-05 22:43+0300\n"
 "PO-Revision-Date: 2022-05-02 15:33+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -126,11 +126,11 @@ msgstr "Сообщение"
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликовон!"
 
-#: appPackage/main/routes.py:55 appPackage/templates/base.html:87
+#: appPackage/main/routes.py:55 appPackage/templates/base.html:93
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: appPackage/main/routes.py:66 appPackage/templates/base.html:88
+#: appPackage/main/routes.py:66 appPackage/templates/base.html:94
 msgid "Explore"
 msgstr "Обзор"
 
@@ -177,7 +177,7 @@ msgstr "Отправить сообщение"
 #: appPackage/templates/_post.html:16
 #, fuzzy, python-format
 msgid "%(username)s said %(when)s :"
-msgstr "%(username)s говорит:"
+msgstr "%(username)s говорит %(when)s:"
 
 #: appPackage/templates/_post.html:23
 msgid "Translate"
@@ -191,17 +191,32 @@ msgstr "Добро пожаловать в микроблог"
 msgid "Error: Could not contact server."
 msgstr "Ошибка: нет связи с сервером"
 
-#: appPackage/templates/base.html:99
+#: appPackage/templates/base.html:105
 msgid "Login"
 msgstr "Логин"
 
-#: appPackage/templates/base.html:101
+#: appPackage/templates/base.html:109 appPackage/templates/messages.html:4
+#, fuzzy
+msgid "Messages"
+msgstr "Сообщение"
+
+#: appPackage/templates/base.html:118
 msgid "Profile"
 msgstr "Профиль"
 
-#: appPackage/templates/base.html:102
+#: appPackage/templates/base.html:119
 msgid "Logout"
 msgstr "Выйти"
+
+#: appPackage/templates/messages.html:12
+#, fuzzy
+msgid "Newer messages"
+msgstr "Отправить сообщение"
+
+#: appPackage/templates/messages.html:17
+#, fuzzy
+msgid "Older messages"
+msgstr "Отправить сообщение"
 
 #: appPackage/templates/send_message.html:5
 #, python-format
