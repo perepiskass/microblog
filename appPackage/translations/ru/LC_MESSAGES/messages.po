@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-01-11 19:52+0300\n"
+"POT-Creation-Date: 2023-01-11 20:02+0300\n"
 "PO-Revision-Date: 2022-05-02 15:33+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -211,12 +211,12 @@ msgstr "Выйти"
 #: appPackage/templates/messages.html:12
 #, fuzzy
 msgid "Newer messages"
-msgstr "Отправить сообщение"
+msgstr "Новые сообщения"
 
 #: appPackage/templates/messages.html:17
 #, fuzzy
 msgid "Older messages"
-msgstr "Отправить сообщение"
+msgstr "Старые сообщения"
 
 #: appPackage/templates/send_message.html:5
 #, python-format
@@ -325,4 +325,3 @@ msgstr "Изменить ваш профиль"
 #: appPackage/templates/main/user.html:35
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
-
