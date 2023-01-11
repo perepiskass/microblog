@@ -101,7 +101,6 @@ msgid "Your password has been reset."
 msgstr "Ваш пароль был сброшен"
 
 #: appPackage/main/forms.py:9 appPackage/main/routes.py:33
-#, fuzzy
 msgid "Search"
 msgstr "Поиск"
 
@@ -166,7 +165,6 @@ msgid "You are not following %(username)s."
 msgstr "Вы не подписанны на пользователя %(username)s"
 
 #: appPackage/main/routes.py:165
-#, fuzzy
 msgid "Your message has been sent."
 msgstr "Ваш сообщение было отправлено."
 
@@ -175,7 +173,6 @@ msgid "Send Message"
 msgstr "Отправить сообщение"
 
 #: appPackage/templates/_post.html:16
-#, fuzzy, python-format
 msgid "%(username)s said %(when)s :"
 msgstr "%(username)s говорит %(when)s:"
 
@@ -196,9 +193,8 @@ msgid "Login"
 msgstr "Логин"
 
 #: appPackage/templates/base.html:125 appPackage/templates/messages.html:4
-#, fuzzy
 msgid "Messages"
-msgstr "Сообщение"
+msgstr "Сообщения"
 
 #: appPackage/templates/base.html:134
 msgid "Profile"
@@ -209,12 +205,10 @@ msgid "Logout"
 msgstr "Выйти"
 
 #: appPackage/templates/messages.html:12
-#, fuzzy
 msgid "Newer messages"
 msgstr "Новые сообщения"
 
 #: appPackage/templates/messages.html:17
-#, fuzzy
 msgid "Older messages"
 msgstr "Старые сообщения"
 

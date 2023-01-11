@@ -96,7 +96,7 @@ def edit_profile():
     return render_template('main/edit_profile.html', title=_('Edit Profile'),form=form)
 
 
-@bp.route('/follow/<username>')
+@bp.route('/follow/<username>', methods=['GET', 'POST'])
 @login_required
 def follow(username):
     form = EmptyForm()
@@ -116,7 +116,7 @@ def follow(username):
         return redirect(url_for('main.index'))
 
 
-@bp.route('/unfollow/<username>')
+@bp.route('/unfollow/<username>', methods=['GET', 'POST'])
 @login_required
 def unfollow(username):
     form = EmptyForm()

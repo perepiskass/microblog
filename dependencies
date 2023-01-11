@@ -26,6 +26,13 @@ pybabel compile -d appPackage/translations
 flask translate update
 flask translate compile
 
+#: appPackage/main/routes.py:165
+#, fuzzy
+#, fuzzy, python-format
+msgid "Your message has been sent."
+msgstr "Ваш сообщение было отправлено."
+
+
 //create db
 flask db init
 flask db migrate -m "init db"
