@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-05 22:43+0300\n"
+"POT-Creation-Date: 2023-01-11 19:52+0300\n"
 "PO-Revision-Date: 2022-05-02 15:33+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -126,11 +126,11 @@ msgstr "Сообщение"
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликовон!"
 
-#: appPackage/main/routes.py:55 appPackage/templates/base.html:93
+#: appPackage/main/routes.py:55 appPackage/templates/base.html:109
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: appPackage/main/routes.py:66 appPackage/templates/base.html:94
+#: appPackage/main/routes.py:66 appPackage/templates/base.html:110
 msgid "Explore"
 msgstr "Обзор"
 
@@ -165,12 +165,12 @@ msgstr "Вы не можете отписаться от себя!"
 msgid "You are not following %(username)s."
 msgstr "Вы не подписанны на пользователя %(username)s"
 
-#: appPackage/main/routes.py:164
+#: appPackage/main/routes.py:165
 #, fuzzy
 msgid "Your message has been sent."
-msgstr "Ваш пароль был сброшен"
+msgstr "Ваш сообщение было отправлено."
 
-#: appPackage/main/routes.py:166
+#: appPackage/main/routes.py:167
 msgid "Send Message"
 msgstr "Отправить сообщение"
 
@@ -191,20 +191,20 @@ msgstr "Добро пожаловать в микроблог"
 msgid "Error: Could not contact server."
 msgstr "Ошибка: нет связи с сервером"
 
-#: appPackage/templates/base.html:105
+#: appPackage/templates/base.html:121
 msgid "Login"
 msgstr "Логин"
 
-#: appPackage/templates/base.html:109 appPackage/templates/messages.html:4
+#: appPackage/templates/base.html:125 appPackage/templates/messages.html:4
 #, fuzzy
 msgid "Messages"
 msgstr "Сообщение"
 
-#: appPackage/templates/base.html:118
+#: appPackage/templates/base.html:134
 msgid "Profile"
 msgstr "Профиль"
 
-#: appPackage/templates/base.html:119
+#: appPackage/templates/base.html:135
 msgid "Logout"
 msgstr "Выйти"
 
